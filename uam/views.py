@@ -5,15 +5,18 @@ from rest_framework.parsers import MultiPartParser, JSONParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.exceptions import APIException
-
 from typing import List, Dict, Any
 import time
+import os
+
 from .serializers import FileUploadSerializer
 from .models import UploadedFile
 from .custom_functions import resume_shortlisting_functions, extract_information_functions
 
 
-client = OpenAI(api_key='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')
+
+api_key = os.getenv('OPENAI_API_KEY', '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')
+client = OpenAI(api_key=api_key)
 
 class FileUploadViewSet(viewsets.ModelViewSet):
     queryset = UploadedFile.objects.all()
