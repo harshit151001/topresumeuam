@@ -25,6 +25,10 @@ extract_information_functions = [
                     'type': 'string',
                     'description': 'Name of the candidate'
                 },
+                'email': {
+                    'type': 'string',
+                    'description': 'Email of the candidate'
+                },
                 'projects': {
                     'type': 'array',
                     'description': 'List of projects done by the candidate',
