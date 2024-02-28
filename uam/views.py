@@ -15,7 +15,7 @@ from .custom_functions import resume_shortlisting_functions, extract_information
 
 
 
-api_key = os.getenv('OPENAI_API_KEY', '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')
+api_key = os.getenv('OPENAI_API_KEY', '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')
 client = OpenAI(api_key=api_key)
 
 class FileUploadViewSet(viewsets.ModelViewSet):
